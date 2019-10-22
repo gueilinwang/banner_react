@@ -1,0 +1,114 @@
+#root .banner.opened, #root .banner.transition.opening {
+  height: 300px;
+  overflow: hidden;
+}
+
+#root .banner.closed, #root .banner.transition.closing {
+  height: 80px;
+  overflow: hidden;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root .banner {
+  width: 1200px;
+  position: relative;
+}
+
+#root .banner.closed .wrap {
+  top: -300px;
+}
+
+#root .banner.transition.opened .wrap {
+  top: 0px;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+#root .banner.transition.opening {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+#root .banner.transition.opening .wrap {
+  top: 0px;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+#root .banner.transition.closed .wrap {
+  top: -300px;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+#root .banner.transition.closing {
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+#root .banner.transition.closing .wrap {
+  top: -300px;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+#root .banner .wrap {
+  position: relative;
+}
+
+#root .banner .btn {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  font-size: 13px;
+  padding: 2px 2px 2px 8px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #a3a3a3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#root .banner .btn::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 2px;
+  border-style: solid;
+  border-width: 0 3px 3px;
+  border-color: transparent transparent #a3a3a3;
+}
+
+#root .banner .btn.down::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 2px;
+  border-style: solid;
+  border-width: 3px 3px 0;
+  border-color: #a3a3a3 transparent transparent;
+}
+
+#root .banner .btn.down::after:hover {
+  border-color: white transparent transparent;
+}
+
+#root .banner .btn:hover {
+  color: white;
+}
+
+#root .banner .btn:hover::after {
+  border-color: transparent transparent white;
+}
+/*# sourceMappingURL=Banner.css.map */
